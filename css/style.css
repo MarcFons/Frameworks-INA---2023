@@ -1,0 +1,182 @@
+body {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin: 0; padding: 0;
+}
+.fondo1{
+	height: 100vh;
+	background-image: url(../img/gato_encabezado.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: auto;
+	position: relative;
+	
+}
+
+.fondo2{
+	height: 100vh;
+	background-image: url(../img/rescate2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: auto;
+	position: relative;
+	
+}
+
+.fondo3{
+	max-width: fit-content;
+	background-image: url(../img/rescate1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.fondo4{
+	text-align: center;
+	color: white;
+	background-color: rgba(3, 5, 9, 0.5);
+}
+
+.piePag {
+	padding-top: 50px;
+	height: 850px;
+	background-image: url(../img/jaguarFondo.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #000;
+}
+
+
+.textofondo1{
+	position: absolute;
+	left: 1%;
+	top: 80%;
+	text-align: center;
+	width: 32%;
+	color: black;
+	background-color: rgb(248, 222, 74, 0.7);}
+
+.textofondo2{
+	text-align: center;
+	color: black;
+	background-color: rgb(248, 222, 74, 0.7);
+	
+}
+.txtDrd {
+	
+	color: #F8DE07;
+	
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+	width: 100%; 
+	height: 5px;
+	background-color: #fff7b3;
+}
+
+.grupoGaleria img{
+	width: 15%;
+	border-radius: 12px;
+
+}
+.grupoGaleria img:hover{
+	transform: scale(1.3);
+	border: 2px solid #000;
+
+}
+
+.linea {
+	background-color: #000;
+	height: 5px;
+	width: 100%;
+	display: block;
+}
+.galeria{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	width: 95%;
+	margin: auto;
+	grid-gap: 10px;
+	padding: 40px 0;
+	overflow: hidden;
+}
+
+.galeria > a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+.galeria img {
+	width: 100%;
+	vertical-align: top;
+	height: 300px;
+	object-fit: cover;
+	transition: transform 0.5s;
+}
+
+.galeria a:hover img {
+	filter: blur(2px);
+	transform: rotate(10deg) scale(1.3);
+}
+
+.light-box {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	transition: transform .3s ease-in-out;
+	width: 100%;
+	height: 100vh;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(0);
+
+}
+
+.light-box img {
+	width: 75vw;
+	max-height: 70vh;
+}
+
+.light-box:target {
+	transform: scale(1);
+}
+
+.close {
+	display: block;
+	position: absolute;
+	top: 70px;
+	right: 40px;
+	background-color: rgb(13, 65, 110);
+	color: #F8DE07;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	text-decoration: none;
+}
+
+.next {
+	display: block;
+	background-color: rgb(13, 65, 110);
+	color: #F8DE07;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	text-decoration: none;
+}
+
+@media screen and (max-width:400px) {
+	.galeria {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+	.close {
+		top: 20px;
+		right: 30px;
+	}
+}
